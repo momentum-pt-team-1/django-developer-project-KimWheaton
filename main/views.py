@@ -10,11 +10,11 @@ def todo_list(request):
     form = TodoForm(request.POST or None, request.FILES or None)
     if form.is_valid():
         form.save()
-    return render(request, 'main/templates/todo/todo_list.html', {'todo': todo, 'form': form})
+    return render(request, 'todo/todo_list.html', {'todo': todo, 'form': form})
 
 def todo_detail(request, pk):
     todo = get_object_or_404(Todo, pk=pk)
-    return render(request, 'main/templates/todo/todo_detail.html', {'todo': todo})
+    return render(request, 'todo/todo_detail.html', {'todo': todo})
 
 def todo_new(request):
     if request.method == "POST":
@@ -27,7 +27,7 @@ def todo_new(request):
             return redirect('todo_detail', pk=todo.pk)
     else:
         form = TodoForm()
-    return render(request, 'main/templates/todo/todo_edit.html', {'form': form})
+    return render(request, 'todo/todo_edit.html', {'form': form})
 
 def todo_edit(request, pk):
     todo = get_object_or_404(Todo, pk=pk)
@@ -41,6 +41,6 @@ def todo_edit(request, pk):
             return redirect('todo_detail', pk=todo.pk)
     else:
         form = TodoForm(instance=todo)
-    return render(request, 'main/templates/todo/todo_edit.html', {'form': form})
+    return render(request, 'todo/todo_edit.html', {'form': form})
     
                     
