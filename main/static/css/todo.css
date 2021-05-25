@@ -1,5 +1,5 @@
 .page-header {
-    background-color: #085399;
+    background-color: #045f9b;
     margin-top: 0;
     margin-bottom: 30 px;
     padding: 0px 20px 20px 20px;
@@ -12,6 +12,9 @@
     color: #ffffff;
     font-size: 36pt;
     text-decoration: none;
+}
+body {
+    background-color: #828282;
 }
 
 img {
