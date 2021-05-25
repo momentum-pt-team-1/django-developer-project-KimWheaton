@@ -7,6 +7,7 @@ from .forms import TodoForm
 
 def todo_list(request):
     todo = Todo.objects.all()
+    todo = Todo.objects.all().order_by('user')
     form = TodoForm(request.POST or None, request.FILES or None)
     if form.is_valid():
         form.save()
