@@ -6,7 +6,7 @@
         <time class="date">
             {{ todo.published_date }}
         </time>
-        <h2><a href= "{% url 'todo_detail' pk=todo.pk %}">{{ todo.title }}</a></h2>
+        <h2><a href= "{% url 'todo_detail' pk=todo.pk %}">{{ todo.title }}{{ todo.user}}</a></h2>
         <p>{{ todo.text|linebreaksbr }}</p>
         <label>
             <input type="checkbox" checked>

@@ -6,8 +6,8 @@ from django.shortcuts import render, get_object_or_404
 from .forms import TodoForm
 
 def todo_list(request):
-    todo = Todo.objects.all()
     todo = Todo.objects.all().order_by('user')
+    todo = Todo.objects.all().order_by('due_date')
     form = TodoForm(request.POST or None, request.FILES or None)
     if form.is_valid():
         form.save()
