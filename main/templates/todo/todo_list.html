@@ -1,4 +1,5 @@
 {% extends 'todo/base.html' %}
+
 {% block content %}
 <h2>Organize Your Todos</h2>
 {% for todo in todo %}
@@ -8,10 +9,13 @@
         </time>
         <h2><a href= "{% url 'todo_detail' pk=todo.pk %}">{{ todo.title }}{{ todo.user }}</a></h2>
         <p>{{ todo.text|linebreaksbr }}</p>
+        {% if todo.due_date %}
+        <p>Finish by: {{ todo.due_date }}</p>
+        {% endif %}
         <label>
             <input type="checkbox" checked>
             <span class="checkable">Done!</span>
         </label>
-        </article>
-    {% endfor %}
+    </article>
+{% endfor %}
 {% endblock %}    
