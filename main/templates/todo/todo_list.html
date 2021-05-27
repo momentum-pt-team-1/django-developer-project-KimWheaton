@@ -6,8 +6,8 @@
         <time class="date">
             {{ todo.published_date }}
         </time>
-        <h4><a href= "{% url 'todo_detail' pk=todo.pk %}">{{ todo.user }}</a></h4>
-        <p>Future accomplishment: {{ todo.text|linebreaksbr }}</p>
+        <p><a href= "{% url 'todo_detail' pk=todo.pk %}">{{ todo.user }}</a></p>
+        <p>{{ todo.text|linebreaksbr }}</p>
         {% if todo.due_date %}
         <p>Finish by: {{ todo.due_date }}</p>
         {% endif %}
