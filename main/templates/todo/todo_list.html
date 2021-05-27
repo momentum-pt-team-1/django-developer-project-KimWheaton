@@ -6,7 +6,7 @@
         <time class="date">
             {{ todo.published_date }}
         </time>
-        <p><a href= "{% url 'todo_detail' pk=todo.pk %}">{{ todo.user }}</a></p>
+        <h3><a href= "{% url 'todo_detail' pk=todo.pk %}">{{ todo.user }}</a></h3>
         <p>{{ todo.text|linebreaksbr }}</p>
         {% if todo.due_date %}
         <p>Finish by: {{ todo.due_date }}</p>
