@@ -18,8 +18,8 @@
     font-size: 5vw;
     padding: .5em;
     color: white;
-  }
-  
+}
+
 .page-header {
     background-color: rgba(149, 199, 223, 0.972);
     margin-top: 10;
@@ -41,7 +41,7 @@ body {
 
 img {
     width: auto;
-    height: 200px;
+    height: 100px;
 }
 
 h1,
@@ -103,7 +103,7 @@ h4 {
 
 .btn-default:hover {
     color: #000000;
-    background-color:rgb(245, 210, 96);
+    background-color:#f5d260;
 }
 
 .small-white-text {
@@ -114,4 +114,13 @@ h4 {
 .small-black-text {
     color: black;
     font-size: 16pt;
+}
+
+@import url(https://weloveiconfonts.com/api/?family=entypo);
+
+/* entypo */
+/* [class*="entypo-"]:before { */
+.entypo-list-add {
+    color: red;
+    /* font-family: 'entypo', sans-serif; */
 }
